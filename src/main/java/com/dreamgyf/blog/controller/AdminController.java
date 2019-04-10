@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionListener;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -68,5 +69,15 @@ public class AdminController {
         Map<String,Object> mapReturn = new HashMap<>();
         mapReturn.put("status","ok");
         return mapReturn;
+    }
+
+    @RequestMapping(value = "/visitorCount")
+    public long visitorCount(HttpSession session)
+    {
+        Object visitorCountObject = session.getAttribute("visitorCount");
+        if(visitorCountObject == null)
+            return 0;
+        else
+            return Long.parseLong(visitorCountObject.toString());
     }
 }
