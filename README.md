@@ -1,6 +1,8 @@
 # 博客-后端
 ### 项目简介
-本项目为使用SpringBoot+Mybatis搭建的博客的后端部分
+本项目为使用SpringBoot+Mybatis搭建的博客的后端部分  
+仿照[https://github.com/Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)的样式  
+个人书写本项目主要是为了练习前端技术
 ### 项目说明
 博客的前端部分使用Github Pages托管在Github上，后端与前端分离开来管理
 ### 项目链接
